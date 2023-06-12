@@ -16,5 +16,7 @@ print(seq)
 
 mutate_residue(pose, index_of_mutate_amino, random_amino)
 
+#Nimm anhand eines Formular, das in VS Code liegt, an, wie wir die Unterlagen in PyRosetta speichern
+
 
 
