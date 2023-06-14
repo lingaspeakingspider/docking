@@ -1,6 +1,7 @@
 from pyrosetta import *
 from pyrosetta.toolbox import *
 from dockstring1 import docking
+import os
 init()
 
 index_of_mutate_amino=0 #2D Diagram
@@ -12,7 +13,8 @@ for i in aminoacid_list:
   seq=pose.sequence()
   
   mutate_residue(pose, index_of_mutate_amino, i)
-  #Nimm anhand eines Formular, das in VS Code liegt, an, wie wir die Unterlagen in PyRosetta speichern
+  os.chdir("/home/biocally/Desktop")
+  pose.dump_file("output.pdb")
   
   docking("<output>", i, seq[index_of_mutate_amino])
 
