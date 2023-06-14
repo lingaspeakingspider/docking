@@ -2,7 +2,7 @@ from dockstring import load_target
 import os
 import rdkit.Chem as Chem
 
-def docking(output):
+def docking(output, mutate_amino, seq_residue):
   smiles = "<smiles of ligand>"
   Chem.MolFromSmiles(smiles)
 
@@ -10,4 +10,4 @@ def docking(output):
   score, aux = target.dock(smiles)
   os.chdir("/home/biocally/Desktop")
   with open("file.txt", "w") as file:
-    file.write()
+    file.write(f"Score {score}, Mutasyon için kullanılan amino asit: {mutate_amino}, Mutasyon geçiren amino asit: {seq_residue}")
