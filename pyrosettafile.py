@@ -13,9 +13,11 @@ for i in aminoacid_list:
   print(seq)
 
   mutate_residue(pose, index_of_mutate_amino, random_amino)
-  docking(
+  #Nimm anhand eines Formular, das in VS Code liegt, an, wie wir die Unterlagen in PyRosetta speichern
+  
+  docking("<output>")
 
-#Nimm anhand eines Formular, das in VS Code liegt, an, wie wir die Unterlagen in PyRosetta speichern
+
 
 
 
