@@ -9,8 +9,8 @@ v.set_ligand_from_file('<ligand>')
 v.compute_vina_maps(center=[15.190, 53.903, 16.917], box_size=[20, 20, 20])
 
 # Score the current pose
-energy = v.score()
-#print('Score before minimization: %.3f (kcal/mol)' % energy[0])
+# energy = v.score()
+# print('Score before minimization: %.3f (kcal/mol)' % energy[0])
 
 # Minimized locally the current pose
 energy_minimized = v.optimize()
