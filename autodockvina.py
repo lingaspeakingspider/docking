@@ -10,7 +10,7 @@ v.compute_vina_maps(center=[15.190, 53.903, 16.917], box_size=[20, 20, 20])
 
 # Score the current pose
 energy = v.score()
-print('Score before minimization: %.3f (kcal/mol)' % energy[0])
+#print('Score before minimization: %.3f (kcal/mol)' % energy[0])
 
 # Minimized locally the current pose
 energy_minimized = v.optimize()
@@ -19,4 +19,5 @@ v.write_pose('1iep_ligand_minimized.pdbqt', overwrite=True)
 
 # Dock the ligand
 v.dock(exhaustiveness=32, n_poses=20)
+v.score()
 v.write_poses('<output>', n_poses=5, overwrite=True)
