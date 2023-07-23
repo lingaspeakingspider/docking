@@ -7,8 +7,8 @@ ligand="lactate.pdbqt"
 main_dir="/home/biocally/Desktop/docking"
 log_path="/home/biocally/Desktop/docking/log_bey.log"
 
-values_list=[231, 293, 235, 232, 143, 23, 139, 140, 19, 239, 20]
-aminoacid_list=['M', 'P', 'A', 'V', 'G', 'Y', 'T', 'D', 'W', 'I', 'F', 'S', 'K', 'E', 'H', 'L', 'N', 'R', 'C', 'Q']
+values_list=[231, 293, 235, 232, 143, 23, 139, 140, 19, 239, 20] #Indexes of residues according to 2D diagram
+aminoacid_list=['M', 'P', 'A', 'V', 'G', 'Y', 'T', 'D', 'W', 'I', 'F', 'S', 'K', 'E', 'H', 'L', 'N', 'R', 'C', 'Q'] 
 output_dir="/home/biocally/Desktop/docking_outputs"
 
 a=1
@@ -29,6 +29,6 @@ for value in values_list:
                                        saves="/home/biocally/Desktop/docking_outputs/saves.txt")
 
 finish=time.perf_counter()
-minute=round((start-finish)/60, 2)
+minute=round((finish-start)/60, 2)
 
 print("Finished in {} minutes.".format(minute))
